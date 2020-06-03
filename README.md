@@ -78,3 +78,7 @@ Contributions are welcome. For major changes, please open an issue first to disc
 ## License
 
 Licensed under [MIT](LICENSE)
+
+## Acknowledgements
+
+[Madhu Akula](https://github.com/madhuakula)
