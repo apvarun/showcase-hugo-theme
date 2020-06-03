@@ -1,0 +1,12 @@
+name = "Showcase"
+license = "MIT"
+licenselink = "https://github.com/apvarun/showcase-hugo-theme/blob/master/LICENSE"
+description = "Minimal, one page, theme for showcasing your work"
+homepage = "https://showcase-hugo-theme.now.sh/"
+tags = ["clean", "gallery", "minimal", "minimalist", "mobile", "one page", "personal", "responsive", "simple", "single page", "tailwind", "starter", "projects", "white" ]
+features = ["responsive", "portfolio", "gallery"]
+min_version = "0.41.0"
+
+[author]
+  name = "Varun A P"
+  homepage = "https://apvarun.com"
