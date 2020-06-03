@@ -1,0 +1,18 @@
+baseURL = "https://showcasetheme.hugo"
+languageCode = "en-us"
+title = "Showcase Theme"
+Paginate = 1000
+googleAnalytics = ""
+theme = "showcase"
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+[params]
+  author = "showcase"
+  description = "Minimal, one page, theme for showcasing your work"
+  message = ""
+
+[social]
+  facebook = "https://facebook.com"
+  twitter = "https://twitter.com"
+  instagram = "https://instagram.com"
+  linkedin = "https://linkedin.com"
