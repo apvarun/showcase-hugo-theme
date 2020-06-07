@@ -1,4 +1,4 @@
-baseURL = "https://showcasetheme.hugo"
+baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Showcase Theme"
 Paginate = 1000
