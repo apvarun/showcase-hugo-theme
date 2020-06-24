@@ -10,6 +10,11 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
   author = "showcase"
   description = "Minimal, one page, theme for showcasing your work"
   message = ""
+  hideAutoMenu = false
+
+[[menu.main]]
+  name = "External"
+  url = "https://example.com"
 
 [social]
   facebook = "https://facebook.com"

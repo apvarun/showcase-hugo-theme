@@ -131,5 +131,6 @@
       );
   });
 
-  document.querySelector(`.show-all`).addEventListener("click", showAll);
+  const showAllButton = document.querySelector(`.show-all`)
+  if(showAllButton) showAllButton.addEventListener("click", showAll);
 </script>
