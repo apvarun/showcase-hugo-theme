@@ -14,6 +14,7 @@ Features:
 - Responsive content
 - Filtering content
 - Social links
+- Custom menu
 
 ## Get the theme
 
@@ -63,9 +64,16 @@ From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and
 
 Menu in Showcase theme is auto-generated from the sections inside your content folder.
 
+You can also add a custom menu item using the `config.toml` and disable auto-generated sections if not required. Refer config in [exampleSite](https://github.com/apvarun/showcase-hugo-theme/blob/master/exampleSite/config.toml)
+
 ## Google Analytics
 
 Set `googleAnalytics` in `config.toml` to activate Hugo's [internal Google Analytics template](https://gohugo.io/templates/internal/#google-analytics).
+
+## Used By
+
+- [Madhu Akula](https://madhuakula.com/content/)
+- [@cloudmiracle](http://cloud.vn/)
 
 ## Issues
 
