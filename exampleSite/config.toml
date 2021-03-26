@@ -6,6 +6,9 @@ googleAnalytics = ""
 theme = "showcase"
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 
+# this setting should always be set to false, otherwise it will break the section navigation bar
+pluralizelisttitles = false
+
 [params]
   author = "showcase"
   description = "Minimal, one page, theme for showcasing your work"
