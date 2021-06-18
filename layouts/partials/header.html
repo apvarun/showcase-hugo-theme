@@ -16,7 +16,7 @@
         class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 show-all"
         >All</a
       >
-      {{ range .Site.Sections }}
+      {{ range where .Site.Sections ".Params.private" "!=" true }}
       <a
         class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 filter-{{lower .Title}}"
         >{{.Title}}</a
