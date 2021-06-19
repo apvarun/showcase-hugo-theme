@@ -64,6 +64,12 @@ From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and
 
 Menu in Showcase theme is auto-generated from the sections inside your content folder.
 
+### Exclude Sections from Menu
+
+It is possible to exclude sections from the auto-generated list. In order to exclude a section, create an `_index.md` file in that section and set the property `private` to `true`. Refer example [index file](https://github.com/apvarun/showcase-hugo-theme/blob/master/exampleSite/content/books/_index.md).
+
+### Custom Menu
+
 You can also add a custom menu item using the `config.toml` and disable auto-generated sections if not required. Refer config in [exampleSite](https://github.com/apvarun/showcase-hugo-theme/blob/master/exampleSite/config.toml)
 
 ## Google Analytics
