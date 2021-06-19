@@ -84,6 +84,12 @@
 <script>
   const allTypes = ["all",  {{ range .Site.Sections }}"{{lower .Title}}",{{ end }}];
   const filter = (event, type) => {
+    const isMultiPage = !!document.querySelector('nav.multipage');
+
+    if (isMultiPage) {
+      return;
+    }
+
     const isActive = event.target.classList.contains("active");
 
     showAll();
@@ -92,7 +98,7 @@
       event.target.classList.add("active");
       if (type !== "other") {
         document
-          .querySelectorAll(`.${type}`)
+          .querySelectorAll(`nav:not(.multipage) .${type}`)
           .forEach((item) => item.classList.remove("hide"));
       } else {
         document
@@ -107,10 +113,10 @@
   const showAll = () => {
     allTypes.forEach((type) => {
       document
-        .querySelectorAll(`.${type}`)
+        .querySelectorAll(`nav:not(.multipage) .${type}`)
         .forEach((item) => item.classList.remove("hide"));
       document
-        .querySelectorAll(`.filter-${type}`)
+        .querySelectorAll(`nav:not(.multipage) .filter-${type}`)
         .forEach((filterItem) => filterItem.classList.remove("active"));
     });
   };
