@@ -1,0 +1,57 @@
+{{ $pagelist := $.Scratch.Get "pages" }}
+{{ if $pagelist }}
+<div>
+  {{ $pages := where $pagelist "Kind" "page" }}
+
+  {{ $paginator := .Paginate (where $pages ".Params.exclude" "!=" "true") .Site.Params.paginate }}
+  <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    {{ range $paginator.Pages }}
+    <a target="_blank" rel="noopener" href="{{ .Params.Link }}"
+      class="card p-4 md:w-1/3 sm:mb-4 mb-6 hover:shadow-xl hover:bg-gray-400 transition duration-200 ease-in rounded-lg {{ lower .Section }}">
+      <div class="rounded-lg h-64 overflow-hidden relative">
+        {{ if (or .Params.Image .CurrentSection.Params.Image) }}
+        <img alt="{{ .Title }}" class="object-cover object-center h-full w-full"
+          src="{{ (or .Params.Image .CurrentSection.Params.Image) }}" />
+        {{ end }}
+        <span class="bg-blue-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">{{
+          title .Section }}</span>
+        <h2
+          class="text-white px-2 py-1 tracking-widest text-2xl leading-tight font-extrabold font-bree text-center w-full h-full flex justify-center items-center absolute top-0 left-0">
+          {{ .Title }}
+        </h2>
+        <p
+          class="text-white px-2 py-1 tracking-widest text-md leading-tight font-light w-full text-center absolute bottom-0 left-0">
+          {{ .Params.Subtitle }}
+        </p>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+
+
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav aria-label="Page navigation">
+    <ul class="flex gap-2 justify-center mt-2">
+      {{ if $paginator.HasPrev }}
+      <li class="cursor-pointer rounded hover:bg-blue-400 hover:text-white"><a class="px-3 py-1"
+          href="{{ $paginator.Prev.URL }}" rel="prev" class="page-link">&laquo; Prev</a></li>
+      {{ end }}
+      {{ range $paginator.Pagers }}
+      {{ if eq . $paginator }}
+      <li class="cursor-pointer rounded bg-blue-500 text-white"><a class="px-3 py-1" href="{{ .URL }}"
+          class="page-link">{{ .PageNumber }}</a></li>
+      {{ else }}
+      <li class="cursor-pointer rounded hover:bg-blue-400 hover:text-white"><a class="px-3 py-1" href="{{ .URL }}"
+          class="page-link">{{ .PageNumber }}</a></li>
+      {{ end }}
+      {{ end }}
+
+      {{ if $paginator.HasNext }}
+      <li class="cursor-pointer rounded hover:bg-blue-400 hover:text-white"><a class="px-3 py-1"
+          href="{{ $paginator.Next.URL }}" rel="next" class="page-link">Next &raquo;</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+</div>
+{{ end }}
