@@ -3,8 +3,9 @@
 <section class="text-gray-700 body-font">
   <div class="container px-5 py-8 mx-auto">
     {{- partial "custom-message.html" . -}}
-    
-    {{ .Scratch.Set "pages" .Site.Pages }}
+
+        
+    {{ .Scratch.Set "pages" .Paginator.Pages }}
 
     {{ if eq .Site.Params.multipage true }}
     {{- partial "pagination.html" . -}}

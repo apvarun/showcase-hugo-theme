@@ -9,16 +9,18 @@
     {{- partial "logo.html" . -}}
     </a>
     <nav
-      class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      class="md:ml-auto flex flex-wrap items-center text-base justify-center {{ if .Site.Params.multipage }} multipage {{ end }}"
     >
       {{ if and (eq .Site.Params.hideAutoMenu false) (eq $.IsNode true ) }}
       <a
         class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 show-all"
+        href="{{ if .Site.Params.multipage }}/{{ else }}#{{ end }}"
         >All</a
       >
       {{ range where .Site.Sections ".Params.private" "!=" true }}
       <a
         class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 filter-{{lower .Title}}"
+        href="{{ if .Site.Params.multipage }}{{ .Permalink }}{{ else }}#{{ end }}"
         >{{.Title}}</a
       >
       {{ end }}

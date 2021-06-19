@@ -14,6 +14,10 @@ pluralizelisttitles = false
   description = "Minimal, one page, theme for showcasing your work"
   message = ""
   hideAutoMenu = false
+  
+  # Pagination options
+  paginate = 3
+  multipage = true
 
 [[menu.main]]
   name = "External"
