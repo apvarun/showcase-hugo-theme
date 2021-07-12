@@ -98,7 +98,7 @@
       event.target.classList.add("active");
       if (type !== "other") {
         document
-          .querySelectorAll(`nav:not(.multipage) .${type}`)
+          .querySelectorAll(`.${type}`)
           .forEach((item) => item.classList.remove("hide"));
       } else {
         document
@@ -113,7 +113,7 @@
   const showAll = () => {
     allTypes.forEach((type) => {
       document
-        .querySelectorAll(`nav:not(.multipage) .${type}`)
+        .querySelectorAll(`.${type}`)
         .forEach((item) => item.classList.remove("hide"));
       document
         .querySelectorAll(`nav:not(.multipage) .filter-${type}`)
