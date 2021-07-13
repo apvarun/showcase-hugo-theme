@@ -1,4 +1,4 @@
-<header class="text-gray-700 body-font sticky top-0 bg-white z-10">
+<header class="text-gray-700 body-font sticky top-0 bg-white z-10 dark:bg-gray-900">
   <div
     class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
   >
@@ -31,6 +31,16 @@
       class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900"
       >{{ .Name }}</a>
       {{ end }}
+      <div
+        class="toggle-dark-mode p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 9a3 3 0 0 0 0 6v-6z" />
+          <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z" />
+        </svg>
+      </div>
     </nav>
   </div>
 </header>

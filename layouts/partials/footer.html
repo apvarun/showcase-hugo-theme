@@ -139,4 +139,16 @@
 
   const showAllButton = document.querySelector(`.show-all`)
   if(showAllButton) showAllButton.addEventListener("click", showAll);
+
+
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  if(darkmode){
+    darkmode.addEventListener('click', ()=>{
+      if(document.body.classList.contains('dark')){
+        document.body.classList.remove('dark')
+      } else {
+        document.body.classList.add('dark')
+      }
+    });
+  }
 </script>
