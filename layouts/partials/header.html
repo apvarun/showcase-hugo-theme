@@ -1,25 +1,25 @@
-<header class="text-gray-700 body-font sticky top-0 bg-white z-10 dark:bg-gray-900">
+<header class="text-gray-700 body-font sticky top-0 z-10 dark:text-white">
   <div
     class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
   >
     <a
-      class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      class="flex title-font font-medium items-center text-gray-900 dark:text-white mb-4 md:mb-0"
       href="{{ .Site.BaseURL }}"
     >
     {{- partial "logo.html" . -}}
     </a>
     <nav
-      class="md:ml-auto flex flex-wrap items-center text-base justify-center {{ if .Site.Params.multipage }} multipage {{ end }}"
+      class="md:ml-auto flex flex-wrap items-center text-base justify-center dark:text-white {{ if .Site.Params.multipage }} multipage {{ end }}"
     >
       {{ if and (eq .Site.Params.hideAutoMenu false) (eq $.IsNode true ) }}
       <a
-        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 show-all"
+        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 show-all"
         href="{{ if .Site.Params.multipage }}/{{ else }}#{{ end }}"
         >All</a
       >
       {{ range where .Site.Sections ".Params.private" "!=" true }}
       <a
-        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 filter-{{lower .Title}}"
+        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 filter-{{lower .Title}}"
         href="{{ if .Site.Params.multipage }}{{ .Permalink }}{{ else }}#{{ end }}"
         >{{.Title}}</a
       >
@@ -28,11 +28,11 @@
       {{ range .Site.Menus.main }}
       <a
       href="{{ .URL }}"
-      class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900"
+      class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
       >{{ .Name }}</a>
       {{ end }}
       <div
-        class="toggle-dark-mode p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200"
+        class="toggle-dark-mode p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"
       >
         <svg xmlns="http://www.w3.org/2000/svg"
         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
