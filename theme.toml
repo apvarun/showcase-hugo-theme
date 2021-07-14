@@ -5,7 +5,7 @@ description = "Minimal, one page, theme for showcasing your work"
 homepage = "https://github.com/apvarun/showcase-hugo-theme"
 tags = ["clean", "gallery", "minimal", "minimalist", "mobile", "one page", "personal", "responsive", "simple", "single page", "tailwind", "starter", "projects", "white" ]
 features = ["responsive", "portfolio", "gallery"]
-min_version = "0.41.0"
+min_version = "0.69.0"
 
 [author]
   name = "Varun A P"

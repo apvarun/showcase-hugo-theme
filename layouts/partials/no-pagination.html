@@ -12,8 +12,9 @@
         <img alt="{{ .Title }}" class="object-cover object-center h-full w-full"
           src="{{ (or .Params.Image .CurrentSection.Params.Image) }}" />
         {{ end }}
-        <span class="bg-blue-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">{{
-          title .Section }}</span>
+        <span class="bg-blue-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+          {{ .Section }}
+        </span>
         <h2
           class="text-white px-2 py-1 tracking-widest text-2xl leading-tight font-extrabold font-bree text-center w-full h-full flex justify-center items-center absolute top-0 left-0">
           {{ .Title }}

@@ -35,12 +35,20 @@ git submodule add https://github.com/apvarun/showcase-hugo-theme.git themes/show
 
 Showcase theme ships with an fully configured example site. For a quick preview:
 
+Copy the `package.json` file from `themes/showcase` folder to your hugo website root folder, and run `npm install`.
+
 ```sh
 cd themes/showcase/exampleSite/
 hugo serve --themesDir ../..
 ```
 
 Then visit `http://localhost:1313/` in your browser to view the example site.
+
+## Migrating to v1.3.0
+
+Minimum Hugo Version: 0.69.0
+
+- Copy the `package.json` file from `themes/showcase` folder to your hugo website root folder, and run `npm install`.
 
 ## Add content
 
