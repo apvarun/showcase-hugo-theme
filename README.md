@@ -6,7 +6,9 @@
 
 Showcase is a minimal, single page theme for Hugo
 
-![Preview](https://github.com/apvarun/showcase-hugo-theme/blob/master/images/screenshot.png)
+![Preview](https://github.com/apvarun/showcase-hugo-theme/raw/main/images/screenshot.png)
+
+![Preview Dark](https://github.com/apvarun/showcase-hugo-theme/raw/main/images/screenshot-dark.png)
 
 Features:
 
