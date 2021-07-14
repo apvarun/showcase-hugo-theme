@@ -138,5 +138,28 @@
   });
 
   const showAllButton = document.querySelector(`.show-all`)
-  if(showAllButton) showAllButton.addEventListener("click", showAll);
+  if(showAllButton) {
+    showAllButton.addEventListener("click", showAll);
+  }
+
+  {{ if .Site.Params.darkMode }}
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+  {{ end }}
 </script>

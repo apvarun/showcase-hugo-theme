@@ -11,8 +11,15 @@
   />
   {{ end }}
   <title>{{ .Site.Title }}</title>
-  <!-- Tailwind CSS JIT CDN -->
-  <script src="https://unpkg.com/tailwindcss-jit-cdn@1.3.0/dist/tailwindcss-jit-cdn.umd.min.js"></script>
+  
+  {{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") }}
+
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
+  {{ else }}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
+  {{ end }}
 
   <style>
     @font-face {

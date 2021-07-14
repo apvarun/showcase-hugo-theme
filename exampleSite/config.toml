@@ -19,6 +19,9 @@ pluralizelisttitles = false
   paginate = 3
   multipage = true
 
+  # Dark mode
+  darkMode = true
+
 [[menu.main]]
   name = "External"
   url = "https://example.com"

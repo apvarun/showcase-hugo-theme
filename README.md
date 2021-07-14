@@ -15,6 +15,7 @@ Features:
 - Filtering content
 - Social links
 - Custom menu
+- Darkmode
 
 ## Get the theme
 
@@ -71,6 +72,10 @@ It is possible to exclude sections from the auto-generated list. In order to exc
 ### Custom Menu
 
 You can also add a custom menu item using the `config.toml` and disable auto-generated sections if not required. Refer config in [exampleSite](https://github.com/apvarun/showcase-hugo-theme/blob/master/exampleSite/config.toml)
+
+## Dark mode
+
+In order to enable darkmode toggle in your side, set the `params.darkMode` property to `true` in your `config.toml`.
 
 ## Google Analytics
 

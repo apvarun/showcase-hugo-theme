@@ -1,0 +1,31 @@
+{
+  "name": "showcase-hugo-theme",
+  "version": "1.3.0",
+  "description": "Showcase is a minimal, single page theme for Hugo",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apvarun/showcase-hugo-theme.git"
+  },
+  "keywords": [
+    "hugo",
+    "showcase",
+    "hugo-theme",
+    "minimal",
+    "one-page"
+  ],
+  "author": "Varun A P",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apvarun/showcase-hugo-theme/issues"
+  },
+  "homepage": "https://github.com/apvarun/showcase-hugo-theme#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.4"
+  }
+}
