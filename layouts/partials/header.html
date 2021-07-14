@@ -31,8 +31,9 @@
       class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
       >{{ .Name }}</a>
       {{ end }}
+      {{ if .Site.Params.darkMode }}
       <div
-        class="toggle-dark-mode p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"
+        class="toggle-dark-mode select-none p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"
       >
         <svg xmlns="http://www.w3.org/2000/svg"
         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -41,6 +42,7 @@
           <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z" />
         </svg>
       </div>
+      {{ end }}
     </nav>
   </div>
 </header>

@@ -142,7 +142,7 @@
     showAllButton.addEventListener("click", showAll);
   }
 
-
+  {{ if .Site.Params.darkMode }}
   const darkmode = document.querySelector('.toggle-dark-mode');
   function toggleDarkMode() {
     if (document.documentElement.classList.contains('dark')) {
@@ -161,4 +161,5 @@
   if(isDark && isDark === 'dark') {
     toggleDarkMode();
   }
+  {{ end }}
 </script>
