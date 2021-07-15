@@ -46,6 +46,12 @@ hugo serve --themesDir ../..
 
 Then visit `http://localhost:1313/` in your browser to view the example site.
 
+When deploying to services like Netlify or Vercel, use the following command for building your site:
+
+```sh
+npm i && hugo -D --gc
+```
+
 ## Migrating to v1.3.0
 
 Minimum Hugo Version: 0.69.0
