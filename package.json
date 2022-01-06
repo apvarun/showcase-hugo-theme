@@ -2,7 +2,11 @@
   "name": "showcase-hugo-theme",
   "version": "1.3.0",
   "description": "Showcase is a minimal, single page theme for Hugo",
-  "scripts": {},
+  "scripts": {
+    "start": "hugo server --disableFastRender",
+    "start-examplesite": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
+    "build": "NODE_ENV=production hugo --gc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apvarun/showcase-hugo-theme.git"
